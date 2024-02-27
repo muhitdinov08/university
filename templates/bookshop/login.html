@@ -1,0 +1,15 @@
+{% extends 'bookshop/base.html' %}
+{% block title %} Login Page{% endblock %}
+
+{% block body %}
+    <h1>User Login Form</h1>
+
+    <h3>Do you not have an <a href="{% url 'bookshop:register-page' %}">account </a></h3>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+    <button type="submit">Submit</button>
+    </form>
+
+    {% endblock %}

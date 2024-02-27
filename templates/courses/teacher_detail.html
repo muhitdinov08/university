@@ -1,0 +1,11 @@
+{% extends 'courses/base.html' %}
+{% block title %} Teacher Detail Page {% endblock %}
+{% block body %}
+    <h1>Teacher Info</h1>
+    <p> <b>Teacher First Name: </b>{{ teacher.first_name }}</p>
+    <p> <b>Teacher Last Name: </b>{{ teacher.last_name }}</p>
+    <p> <b>Teacher Degree: </b>{{ teacher.degree }}</p>
+    <p> <b>Teacher Age: </b>{{ teacher.age }}</p>
+
+
+{% endblock %}

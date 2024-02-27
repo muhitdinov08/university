@@ -1,0 +1,9 @@
+    {% extends 'bookshop/base.html' %}
+    {% block title %}Store Detail{% endblock %}
+    {% block body %}
+        <h1>Store Detail Page</h1>
+        <h3>{{ store.name }}</h3>
+        {% for book in store.books.all %}
+            {{ book.name }} {{ book.rating }} {{ book.price }}  <br>
+        {% endfor %}
+    {% endblock %}

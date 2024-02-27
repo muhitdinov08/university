@@ -1,0 +1,8 @@
+{% extends 'courses/base.html' %}
+{% block body %}
+
+<h1>Specialities</h1><br><a type="button" href="{% url 'courses:speciality-create' %}" ><button>create new speciality</button></a><br> <br>
+    {% for speciality in specialities %}
+        <a href="{% url 'courses:speciality-detail' speciality.id %}">{{ speciality.name }}</a> <br>
+    {% endfor %}    
+{% endblock %}

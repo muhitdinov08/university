@@ -1,0 +1,6 @@
+{% extends 'bookshop/base.html' %}
+{% block body %}
+{% for author in authors %}
+    <h3> {{ author.username }}</h3><br>
+{% endfor %}
+{% endblock %}

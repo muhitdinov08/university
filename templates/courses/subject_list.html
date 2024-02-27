@@ -1,0 +1,7 @@
+{% extends 'courses/base.html' %}
+{% block body %}
+    <h1>Subjects</h1><br><br>
+{% for subject in subjects %}
+    {{ subject.name }}<br>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'bookshop/base.html'%}
+{% block body %}
+    <h4>Book Detail</h4>
+    <br>
+    <h3>{{ book.name }}</h3>
+    {{ book.authors }}<br>
+    {{ book.rating }}<br>
+    {{ book.price }}<br>
+    {{ book.publisher }}<br>
+    {{ book.pages }}<br>
+{% endblock %}

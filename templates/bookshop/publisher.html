@@ -1,0 +1,16 @@
+{% extends 'bookshop/base.html' %}
+{% block title %} Publisher {% endblock %}
+
+{% block body %}
+    <h3>   Publisher Create Page </h3>
+    <form action="{% url 'bookshop:publisher-page' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+    </form>
+    <br>
+    <hr>
+    {% for publisher in publishers %}
+        {{ publisher.name }} {{ publisher.created_at }} {{ publisher.is_active }} <br>
+    {% endfor %}
+{% endblock %}

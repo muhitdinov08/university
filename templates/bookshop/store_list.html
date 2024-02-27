@@ -1,0 +1,9 @@
+{% extends "bookshop/base.html" %}
+{% block title %}Store List{% endblock %}
+{% block body %}
+    <h1>Store List Page</h1>
+    <a href="{% url 'bookshop:store-create' %}"><button>Create Store</button></a> <br>
+    {% for store in stores %}
+        <a href="{% url 'bookshop:store-detail' store.pk %}"> {{ store.name }} </a><br>
+    {% endfor %}
+{% endblock %}

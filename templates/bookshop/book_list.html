@@ -1,0 +1,6 @@
+{% extends 'bookshop/base.html' %}
+{% block body %}
+{% for book in books %}
+    <a class="dropdown-item" href="{% url 'bookshop:book-detail' book.pk%}"><h3>{{ book.name }}</h3></a>
+{% endfor %}
+{% endblock %}
